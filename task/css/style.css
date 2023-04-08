@@ -1,17 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: Verdana, Geneva, sans-serif;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
 
 }
-.container{
+
+.container {
     margin: auto;
 }
-.carousel{
+
+.carousel {
     width: 640px;
     height: 480px;
     display: flex;
@@ -22,36 +25,69 @@ body{
     position: relative;
     border-radius: 8px;
 }
-.wrapper{
+
+.wrapper {
     display: flex;
     transform: translateX(0);
     transition: all 0.5s ease-out;
 }
-.wrapper img{
+
+.catContainer {
+    position: relative;
+}
+
+.catContainer img {
     width: 640px;
     height: 480px;
     object-fit: cover;
 }
-.buttons{
+
+.description {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s ease-out;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.carousel:hover .description {
+    cursor: text;
+    transform: translateY(-100px);
+}
+
+.description span{
+    display: block;
+}
+
+.buttons {
     width: 100%;
     position: absolute;
     display: flex;
     justify-content: space-between;
     padding: 12px;
+
 }
-.button{
+
+.button {
     border: none;
     color: #fff;
     cursor: pointer;
     width: 100px;
-    height: 30vh;
+    height: 20vh;
     transition: all 0.5s ease-out;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
-.button span{
+
+.button span {
     font-size: 2rem;
 }
-.button:hover{
-    background: rgba(0,0,0,0.4);
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.4);
 }
